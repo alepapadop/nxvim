@@ -1,0 +1,2 @@
+# nxvim
+A neovim distribution
