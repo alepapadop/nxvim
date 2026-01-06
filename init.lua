@@ -158,6 +158,21 @@ vim.pack.add {
         version = 'master'
     }
 }
+vim.pack.add {
+    {
+        src = 'https://github.com/yetone/avante.nvim',
+        -- version = vim.version.range("^18.0.0")
+        version = 'main',
+        build = function()
+            vim.fn.system({ "make" })
+        end,
+    },
+    {
+        src = 'MunifTanjim/nui.nvim',
+        -- version = vim.version.range("^18.0.0")
+        version = 'main'
+    }
+}
 
 -- ----------------------------------------------------------------------------
 -- END PACKAGE MANAGER CALLS --------------------------------------------------
@@ -250,7 +265,6 @@ function nXvim.api.HydraHint(group)
         end
     end
     hint = hint .. '_<Esc>_: Exit' .. '\n'
-    print(hint)
     return hint;
 end
 
@@ -356,7 +370,6 @@ vim.o.winborder = 'rounded'
 
 -- highlight yanked text
 vim.api.nvim_create_autocmd("TextYankPost", {
-  group = augroup,
   callback = function()
     vim.highlight.on_yank()
   end,
@@ -517,7 +530,6 @@ function LspConfig()
         filetypes = { 'c', 'cpp', 'objc', 'objcpp', 'cuda', 'cxx', 'hpp' },
     })
     vim.lsp.enable('clangd')
-    
 
 -- add lua language server to path
     vim.lsp.config('lua_ls', {
@@ -836,15 +848,18 @@ function NavicConfig()
     navic.setup{
         highlight = true
     }
-
-    require('lspconfig').clangd.setup {
-        on_attach = function(client, bufnr)
-            navic.attach(client, bufnr)
-        end
-    }
 end
 
 vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
+
+function AIConfig()
+    require("avante").setup({
+        provider = "gemini", -- or "openai", "anthropic", etc.
+        gemini = {
+            model = "gemini-2.5-flash",
+        },
+    })
+end
 
 -- ----------------------------------------------------------------------------
 -- END CONFIG FUNCTIONS -------------------------------------------------------
@@ -866,6 +881,13 @@ vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
 vim.api.nvim_create_autocmd('LspAttach', {
     group = vim.api.nvim_create_augroup('UserLspConfig', {}),
     callback = function(ev)
+
+        if package.loaded['nvim-navic'] then
+            local client_id = ev.data.client_id
+            local navic = require('nvim-navic')
+            navic.attach(vim.lsp.get_client_by_id(client_id), ev.buf)
+        end
+
         -- Enable completion triggered by <c-x><c-o>
         vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
         -- See `:help vim.lsp.*` for documentation on any of the below functions
@@ -931,8 +953,7 @@ HydraConfig()
 DapConfig()
 NavicConfig()
 IlluminateConfig()
-
-
+AIConfig()
 
 -- ----------------------------------------------------------------------------
 -- END CALL CONFIG FUNCTIONS --------------------------------------------------
