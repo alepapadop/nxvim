@@ -1,4 +1,4 @@
-# nxvim
+# nXvim
 An opinionated Neovim distribution that tries to implement the KISS principle.
 
 A single configuration file that uses a minimal API, which can be ignored. It tries to keep things
