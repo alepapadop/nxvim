@@ -1,12 +1,14 @@
 # nxvim
-An opiniated neovim distribution
+An opinionated Neovim distribution that tries to implement the KISS principle.
 
-A single configuration file that uses a minimal API which can be ignored! Tries to keep things
-simple by using the native neovim api with a preference to the vim.api interface over the lua.
-Trying to use as much as more built in functionality over plugins
+A single configuration file that uses a minimal API, which can be ignored. It tries to keep things
+simple by using the native Neovim API, with a preference for the vim.api interface over Lua.
+It aims to use as much built-in functionality as possible instead of relying on plugins.
+
+Ready for Lua and C/C++ development.
 
 
-The main plugins are.
+The main plugins are:
 Theme:
 catppuccin -> https://github.com/catppuccin/nvim
 
@@ -64,7 +66,34 @@ https://github.com/L3MON4D3/LuaSnip
 
 
 
-The nXvim API is used mostry to map the keymaps. The API functions are
+The nXvim API is used primarily to define key mappings.
+
+
+Namespace
+nXvim.api
+
+Libraryfunctions should not be used directly; they are helper functions intended for implementing other features.
+nXvim.api.MapAddTableData
+nXvim.api.HydraHead
+nXvim.api.HydraHint
+nXvim.api.HydraTemplate
+
+User-space functions can be used for further configuration by the user.
+nXvim.api.KeyMap
+nXvim.api.KeyMapBuffer
+nXvim.api.HelpMap
+
+These functions are used to map keys to the Hydra. The functions are well documented inside the configuration file.
+
+
+
+
+
+
+
+
+
+
 
 
 
