@@ -1,4 +1,4 @@
-# nXvim
+# nXvim - Next Vim
 
 An opinionated Neovim distribution that tries to implement the KISS principle.
 
