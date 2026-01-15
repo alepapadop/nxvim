@@ -10,10 +10,10 @@ Ready for Lua and C/C++ development.
 
 The main plugins are:
 
-+ ### Theme:
++ Theme:
   [catppuccin](https://github.com/catppuccin/nvim)  
 
-+ ### Syntax:
++ Syntax:
 [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)  
 
 ### Searching:
