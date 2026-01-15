@@ -9,65 +9,64 @@ Ready for Lua and C/C++ development.
 
 
 The main plugins are:
-Theme:
-catppuccin -> https://github.com/catppuccin/nvim
 
-Syntax:
-Treesitter -> https://github.com/nvim-treesitter/nvim-treesitter
+### Theme:
+[catppuccin](https://github.com/catppuccin/nvim)
 
-Searching:
-Telescope -> https://github.com/nvim-telescope/telescope.nvim
+### Syntax:
+[Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 
-Status line:
-LuaLine -> https://github.com/nvim-lualine/lualine.nvim
+### Searching:
+[Telescope](https://github.com/nvim-telescope/telescope.nvim)
 
-Icons:
-WebDevicons -> https://github.com/nvim-tree/nvim-web-devicons
-VimDevicons -> https://github.com/ryanoasis/vim-devicons
-Mini Icons -> https://github.com/nvim-mini/mini.icons
+### Status line:
+[LuaLine](https://github.com/nvim-lualine/lualine.nvim)
 
-Greeter:
-Alpha -> https://github.com/goolord/alpha-nvim
+### Icons:
+[WebDevicons](https://github.com/nvim-tree/nvim-web-devicons)
+[VimDevicons](https://github.com/ryanoasis/vim-devicons)
+[Mini Icons](https://github.com/nvim-mini/mini.icons)
 
-File Browser:
-Neo Tree -> https://github.com/nvim-neo-tree/neo-tree.nvim
+### Greeter:
+[Alpha](https://github.com/goolord/alpha-nvim)
 
-LSP manager:
-Mason -> https://github.com/mason-org/mason.nvim
-Mason - LSP -> https://github.com/mason-org/mason-lspconfig.nvim
+### File Browser:
+[Neo Tree](https://github.com/nvim-neo-tree/neo-tree.nvim)
 
-Coding:
-Blink -> https://github.com/saghen/blink.cmp
-Illuminate -> https://github.com/RRethy/vim-illuminate
-Navic -> https://github.com/SmiteshP/nvim-navic
+### LSP manager:
+[Mason](https://github.com/mason-org/mason.nvim)
+[Mason - LSP](https://github.com/mason-org/mason-lspconfig.nvim)
 
-Terminal:
-ToggleTerm -> https://github.com/akinsho/toggleterm.nvim
+### Coding:
+[Blink](https://github.com/saghen/blink.cmp)
+[Illuminate](https://github.com/RRethy/vim-illuminate)
+[Navic](https://github.com/SmiteshP/nvim-navic)
 
-Debugging:
-Nvim dap -> https://github.com/mfussenegger/nvim-dap
-Mason dap -> https://github.com/jay-babu/mason-nvim-dap.nvim
-Dap view -> https://github.com/igorlfs/nvim-dap-vie
+### Terminal:
+[ToggleTerm](https://github.com/akinsho/toggleterm.nvim)
 
-Key help:
-Hydra -> https://github.com/nvimtools/hydra.nvim
+### Debugging:
+[Nvim dap](https://github.com/mfussenegger/nvim-dap)
+[Mason dap](https://github.com/jay-babu/mason-nvim-dap.nvim)
+[Dap view](https://github.com/igorlfs/nvim-dap-vie)
 
-AI:
-Avante -> https://github.com/yetone/avante.nvim'
+### Key help:
+[Hydra](https://github.com/nvimtools/hydra.nvim)
 
+### AI:
+[Avante](https://github.com/yetone/avante.nvim)
 
-Dependencies & helper plugins:
-Plenary -> https://github.com/nvim-lua/plenary.nvim
-https://github.com/nvim-telescope/telescope-ui-select.nvim
-https://github.com/MunifTanjim/nui.nvim
-https://github.com/rachartier/tiny-code-action.nvim
-https://github.com/ibhagwan/fzf-lua
-https://github.com/L3MON4D3/LuaSnip
+### Dependencies & Helper plugins:
+[Plenary](https://github.com/nvim-lua/plenary.nvim)
+[Telescope UI select](https://github.com/nvim-telescope/telescope-ui-select.nvim)
+[Nui](https://github.com/MunifTanjim/nui.nvim)
+[Tiny Code actions](https://github.com/rachartier/tiny-code-action.nvim)
+[fzf lua](https://github.com/ibhagwan/fzf-lua)
+[LuaSnip](https://github.com/L3MON4D3/LuaSnip)
 
 
 
 The nXvim API is used primarily to define key mappings.
-
 
 Namespace
 nXvim.api
