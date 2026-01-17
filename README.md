@@ -86,7 +86,11 @@ The nXvim API is used primarily to define key mappings.
 These functions are used to map keys to the Hydra. The functions are well documented inside the configuration file.
 
 
-
+##
+Explain its plugin  
+Check external packages  
+Add support for Python, Rust, Html, JS, Carbon, Go  
+Create Website  
 
 
 
