@@ -21,7 +21,6 @@ vim.pack.add({
         version = 'master'
     }
 })
--- required packages ripgrep and fd
 vim.pack.add({
     {
         src = 'https://github.com/nvim-telescope/telescope.nvim',
@@ -74,59 +73,59 @@ vim.pack.add({
 
 })
 vim.pack.add{
-    { 
+    {
         src = 'https://github.com/neovim/nvim-lspconfig',
         version = 'main'
     },
-    { 
+    {
       src = 'https://github.com/mason-org/mason.nvim',
       version = 'main'
     },
-    { 
+    {
       src = 'https://github.com/mason-org/mason-lspconfig.nvim',
       version = 'main'
     }
 }
 vim.pack.add{
-    { 
+    {
         src = 'https://github.com/rachartier/tiny-code-action.nvim',
         version = 'main'
     }
 }
 vim.pack.add{
-    { 
+    {
         src = 'https://github.com/ibhagwan/fzf-lua',
         version = 'main'
     }
 }
 vim.pack.add{
-    { 
+    {
         src = 'https://github.com/L3MON4D3/LuaSnip',
         version = 'master'
     },
-    { 
+    {
         src = 'https://github.com/Saghen/blink.cmp',
         version = 'main'
     }
 }
 vim.pack.add {
-    { 
+    {
         src = 'https://github.com/akinsho/toggleterm.nvim',
         version = 'main'
     }
 }
 vim.pack.add {
-    { 
+    {
         src = 'https://github.com/nvimtools/none-ls.nvim',
         version = 'main'
     }
 }
 vim.pack.add {
-    { 
+    {
         src = 'https://github.com/mfussenegger/nvim-dap',
         version = 'master'
     },
-    { 
+    {
         src = 'https://github.com/igorlfs/nvim-dap-view',
         version = 'main'
     },
@@ -137,17 +136,13 @@ vim.pack.add {
 
 }
 vim.pack.add {
-    -- { 
-        -- src = 'https://github.com/anuvyklack/hydra.nvim',
-        -- version = 'master'
-    -- }
-    { 
+    {
         src = 'https://github.com/nvimtools/hydra.nvim',
         version = 'main'
     }
 }
 vim.pack.add {
-    { 
+    {
         src = 'https://github.com/SmiteshP/nvim-navic',
         version = 'master'
     }
@@ -167,11 +162,6 @@ vim.pack.add {
             vim.fn.system({ "make" })
         end,
     },
-    {
-        src = 'MunifTanjim/nui.nvim',
-        -- version = vim.version.range("^18.0.0")
-        version = 'main'
-    }
 }
 
 -- ----------------------------------------------------------------------------
@@ -282,7 +272,6 @@ function nXvim.api.HydraTemplate(name, cmd_str, group)
             hint = {
                 type = 'window',
                 position = 'bottom-right',
-                border = 'rounded',
             },
         },
         mode = 'n',
@@ -347,13 +336,13 @@ vim.diagnostic.config(
         virtual_text = {
             spacing = 2,
             prefix = '●',
+            current_line = true,
         },
         update_in_insert = false,
         severity_sort = true,
         signs = {
             text = {
-                -- Alas nerdfont icons don't render properly on Medium!
-                [vim.diagnostic.severity.ERROR] = ' ', 
+                [vim.diagnostic.severity.ERROR] = ' ',
                 [vim.diagnostic.severity.WARN]  = ' ',
                 [vim.diagnostic.severity.HINT]  = '',
                 [vim.diagnostic.severity.INFO]  = ' ',
@@ -367,13 +356,6 @@ vim.api.nvim_cmd({cmd = 'colorscheme',args = {'catppuccin-frappe'}}, {}) -- latt
 
 -- set the global window border option
 vim.o.winborder = 'rounded'
-
--- highlight yanked text
-vim.api.nvim_create_autocmd("TextYankPost", {
-  callback = function()
-    vim.highlight.on_yank()
-  end,
-})
 
 -- ----------------------------------------------------------------------------
 -- END OPTIONS --------------------------------------------------------------
@@ -457,16 +439,6 @@ nXvim.api.HelpMap('Control + Space'     , 'Show/hide auto completion'       , 'A
 nXvim.api.HelpMap('Control + k'         , 'Show signature'                  , 'Auto Completion')
 
 -- DAP
-vim.api.nvim_create_user_command('DapStart', function()
-  vim.cmd('DapNew')
-  vim.cmd('DapViewOpen')
-end, {})
-
-vim.api.nvim_create_user_command('DapEnd', function()
-  vim.cmd('DapTerminate')
-  vim.cmd('DapViewClose')
-end, {})
-
 nXvim.api.KeyMap('n', '<leader>ds'   , ':DapStart<CR>'                   , 'Start debugger'     , 'Debug')
 nXvim.api.KeyMap('n', '<leader>db'   , ':DapToggleBreakpoint<CR>'        , 'Toggle breakpoint'  , 'Debug')
 nXvim.api.KeyMap('n', '<leader>dc'   , ':DapContinue<CR>'                , 'Continue'           , 'Debug')
@@ -474,6 +446,9 @@ nXvim.api.KeyMap('n', '<leader>di'   , ':DapStepInto<CR>'                , 'Step
 nXvim.api.KeyMap('n', '<leader>do'   , ':DapStepOut<CR>'                 , 'Step Out'           , 'Debug')
 nXvim.api.KeyMap('n', '<leader>dn'   , ':DapStepOver<CR>'                , 'Step Over'          , 'Debug')
 nXvim.api.KeyMap('n', '<leader>de'   , ':DapEnd<CR>'                     , 'Start debugger'     , 'Debug')
+
+-- Avante
+nXvim.api.KeyMap('n', '<leader>a'    , ':AvanteToggle<CR>'               , 'Avante toggle'      , 'AI')
 
 -- ----------------------------------------------------------------------------
 -- END KEYMAPS ----------------------------------------------------------------
@@ -537,11 +512,11 @@ function LspConfig()
         cmd = { 'lua-language-server' },
         settings = {
             Lua = {
-                runtime = { 
-                    version = 'LuaJIT' 
+                runtime = {
+                    version = 'LuaJIT'
                 },
                 diagnostics = {
-                    globals = {'vim'} 
+                    globals = {'vim'}
                 }
             },
         },
@@ -636,8 +611,8 @@ function BlinkConfig()
                 auto_show_delay_ms = 500
             }
         },
-        signature = { 
-            enabled = true 
+        signature = {
+            enabled = true
         },
         snippets = {
             preset = "luasnip"
@@ -699,7 +674,6 @@ function HydraGenericHelpConfig(hydras)
             hint = {
                 type = 'window',
                 position = 'bottom-right',
-                border = 'rounded',
             },
         },
         mode = 'n',
@@ -709,7 +683,6 @@ function HydraGenericHelpConfig(hydras)
 end
 
 function HydraConfig()
-
     local hydras = {}
 
     hydras = {
@@ -759,6 +732,9 @@ function HydraConfig()
             cmd = 'd',
         }
     }
+    
+    -- Trigger tge LspAttach in order to collect the keymaps
+    vim.api.nvim_exec_autocmds("LspAttach", { buffer = 0 })
 
     HydraGenericHelpConfig(hydras);
 end
@@ -854,9 +830,12 @@ vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
 
 function AIConfig()
     require("avante").setup({
-        provider = "gemini", -- or "openai", "anthropic", etc.
-        gemini = {
-            model = "gemini-2.5-flash",
+        provider = 'gemini',
+        providers = {
+            gemini = {
+                api_key_name = 'GEMINI_API_KEY',
+                model = "gemini-2.5-flash",
+            },
         },
     })
 end
@@ -882,7 +861,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
     group = vim.api.nvim_create_augroup('UserLspConfig', {}),
     callback = function(ev)
 
-        if package.loaded['nvim-navic'] then
+        print("lala")
+        if package.loaded['nvim-navic'] and ev.data then
             local client_id = ev.data.client_id
             local navic = require('nvim-navic')
             navic.attach(vim.lsp.get_client_by_id(client_id), ev.buf)
@@ -904,10 +884,28 @@ vim.api.nvim_create_autocmd('LspAttach', {
         nXvim.api.KeyMapBuffer(ev.buf, 'n', '<leader>ca'   , ':lua vim.lsp.buf.code_action()<CR>'                                  , 'LSP code action'              , 'Code' )
         nXvim.api.KeyMapBuffer(ev.buf, 'n', '<leader>gr'   , ':lua vim.lsp.buf.references()<CR>'                                   , 'LSP references'               , 'Code' )
         nXvim.api.KeyMapBuffer(ev.buf, 'n', '<leader>f'    , ':lua vim.lsp.buf.format({ async = true })<CR>'                       , 'LSP format'                   , 'Code' )
+
+        -- vim.api.nvim_exec_autocmds("User",  {pattern = 'HydraConfigUpdate'})
     end,
 })
 
+-- DAP
+vim.api.nvim_create_user_command('DapStart', function()
+  vim.cmd('DapNew')
+  vim.cmd('DapViewOpen')
+end, {})
 
+vim.api.nvim_create_user_command('DapEnd', function()
+  vim.cmd('DapTerminate')
+  vim.cmd('DapViewClose')
+end, {})
+
+-- highlight yanked text
+vim.api.nvim_create_autocmd("TextYankPost", {
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+})
 
 -- Open the file at the last position
 vim.api.nvim_create_autocmd("BufReadPost", {
@@ -918,6 +916,14 @@ vim.api.nvim_create_autocmd("BufReadPost", {
         end
     end
 })
+
+-- vim.api.nvim_create_autocmd("User", {
+    -- pattern = 'HydraConfigUpdate',
+    -- callback = function()
+        -- HydraConfig()
+    -- end,
+-- })
+
 
 -- Create undo directory if it doesn't exist
 local undodir = vim.fn.expand('~/.vim/undodir')
@@ -949,11 +955,11 @@ TelescopeConfig()
 AlphaSplashConfig()
 BlinkConfig()
 ToggletermConfig()
-HydraConfig()
 DapConfig()
 NavicConfig()
 IlluminateConfig()
 AIConfig()
+HydraConfig()
 
 -- ----------------------------------------------------------------------------
 -- END CALL CONFIG FUNCTIONS --------------------------------------------------
