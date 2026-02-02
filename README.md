@@ -86,6 +86,141 @@ The nXvim API is used primarily to define key mappings.
 These functions are used to map keys to the Hydra. The functions are well documented inside the configuration file.
 
 
+## Key Mappings
+
+The user can find all the custom key mappings by pressing <leader>h, the hydra plugin will present a menu with the key mappings
+categorized per action type. 
+
++ **Leader**  
+  The leader key is `\`   
+
++ **Configuration**
+  
+| Key | Function |
+| --- | --- |
+| `<leader>cs` | Source init lua file |
+| `<leader>ce` | Edit init lua file |
+
++ **Search**
+  
+| Key | Function |
+| --- | --- |
+| `<leader>ff` | Telescope find files |
+| `<leader>fg` | Telescope live grep |
+| `<leader>fb` | Telescope find in buffers |
+| `<leader>fh` | Telescope help tags |
+
++ **Code**  
+
+| Key | Function |
+| --- | --- |
+| `<leader>td` | Telescope diagnostics |
+| `<leader>tr` | Telescope references |
+| `<leader>tin` | Telescope incoming calls |
+| `<leader>tou` | Telescope outgoing calls |
+| `<leader>tdb` | Telescope document symbols in buffer |
+| `<leader>tdw` | Telescope document symbols in workspace |
+| `<leader>ti` | Telescope goto implementation |
+| `<leader>tdf` | Telescope goto definition |
+| `<leader>tdt` | Telescope goto type definition |
+| `<leader>cf` | Telescope code action |
+| `<leader>de` | LSP diagnostics floating window |
+| `<leader>dl` | LSP diagnostics list |
+| `<leader>dn` | LSP goto next issue |
+| `<leader>dne` | LSP goto next issue ERROR |
+| `<leader>dnw` | LSP goto next issue WARNING |
+| `<leader>dni` | LSP goto next issue INFO |
+| `<leader>dnh` | LSP goto next issue HINT |
+| `<leader>dpe` | LSP goto previous issue ERROR |
+| `<leader>dpw` | LSP goto previous issue WARNING |
+| `<leader>dpi` | LSP goto previous issue INFO |
+| `<leader>dph` | LSP goto previous issue HINT |
+| `<leader>gD` | LSP goto declaration |
+| `<leader>K` | LSP info |
+| `<leader>gd` | LSP goto definition |
+| `<leader>gi` | LSP goto implementation |
+| `<leader>gs` | LSP signature help |
+| `<leader>wa` | LSP add workspace |
+| `<leader>wl` | LSP workspaces |
+| `<leader>D` | LSP goto type definition |
+| `<leader>rn` | LSP rename |
+| `<leader>ca` | LSP code action |
+| `<leader>gr` | LSP references |
+
++ **File Browser**
+
+| Key | Function |
+| --- | --- |
+| `<leader>b` | Neotree toggle file browser |
+
+
++ **Comments**
+
+| Key | Function |
+| --- | --- |
+| `<leader>cc` | Comment line toggle |
+
+
+
++ **Window**  
+
+| Key | Function |
+| --- | --- |
+| `Control + Left` | Vertical resize +1 |
+| `Control + Right` | Vertical resize -1 |
+| `Control + Up` | Horizontal resize +1 |
+| `Control + Down` | Horizontal resize -1 |
+
++ **Terminal**  
+
+| Key | Function |
+| --- | --- |
+| `<leader>tt` | Toogle terminal window |
+| `<leader>tf` | Toogle floating terminal window |
+| `<leader>ts` | Select terminal |
+| `<leader>tn` | New terminal |
+| `<leader>tnf` | New floating terminal |
+
++ **Auto Completion**
+  
+| Key | Function |
+| --- | --- |
+| `Enter` | Accept |
+| `Tab` | Select Next |
+| `Shift + Tab` | Select previous |
+| `Control + Space` | Show/Hide auto completion |
+| `Control + k` | Show signature |
+
++ **Debug**
+  
+| Key | Function |
+| --- | --- |
+| `<leader>ds` | Start debugger |
+| `<leader>db` | Toggle breakpoint |
+| `<leader>dc` | Continue |
+| `<leader>di` | Step Into |
+| `<leader>do` | Step Out |
+| `<leader>dn` | Step Over |
+| `<leader>de` | Stop debugger |
+
++ **AI**
+  
+| Key | Function |
+| --- | --- |
+| `<leader>a` | Avante toggle |
+  
+
++ **Help**
+  
+| Key | Function |
+| --- | --- |
+| `<leader>h` | Show Hydra help window |
+
+  
+  
+
+
+  
 ##
 Explain its plugin  
 Check external packages  
