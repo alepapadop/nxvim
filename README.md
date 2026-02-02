@@ -85,11 +85,28 @@ The nXvim API is used primarily to define key mappings.
 
 These functions are used to map keys to the Hydra. The functions are well documented inside the configuration file.
 
+## Configuration Structure ##
+The configuration file is well-structured. The start and end of each section are marked with a multi-line comment and a header.   
+The configuration sections are as follows:   
++ Package manager calls
++ nXvim API
++ nvim builtin options
++ Key mapping
++ Plugin configuration functions
++ Auto commands
++ Plugin configuraton function call section
+
+Each plugin is configured in a dedicated function, and at the end of the file, the plugin configuration functions are called  
+
+## AI configuration ##
+Currently, the Avante plugin is used to provide AI assistance. To configure the AI, an API key is required; the plugin's documentation page contains detailed instructions.   
+For Google Gemini, you can obtain a free API key at https://aistudio.google.com/app/api-keys. Afterward, add the following to your `.bashrc` file:  
+`export GEMINI_API_KEY="your_key_here"` (be sure to keep the quotes)  
+Right now, Gemini's free plan is a good option, as it offers a large token capacity. Of course, this doesn't mean that it is the best option.  
 
 ## Key Mappings
 
-The user can find all the custom key mappings by pressing <leader>h, the hydra plugin will present a menu with the key mappings
-categorized per action type. 
+Users can find all custom key mappings by pressing `<leader>h`. The Hydra plugin will then present a menu with the key mappings categorized by action type
 
 + **Leader**  
   The leader key is `\`   
