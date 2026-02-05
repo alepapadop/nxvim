@@ -52,7 +52,7 @@ vim.pack.add({
 vim.pack.add({
     {
         src = 'https://github.com/echasnovski/mini.icons',
-        version = 'master'
+        version = 'main'
 
     },
     {
@@ -75,7 +75,7 @@ vim.pack.add({
 vim.pack.add{
     {
         src = 'https://github.com/neovim/nvim-lspconfig',
-        version = 'main'
+        version = 'master'
     },
     {
       src = 'https://github.com/mason-org/mason.nvim',
@@ -231,7 +231,6 @@ end
 -- library function do not use it
 function nXvim.api.HydraHead(group)
     local head = {}
-    local hint = ''
 
     if nXvim.api.KEY_MAP_DATA[group] then
         local data = nXvim.api.KEY_MAP_DATA[group]
@@ -251,10 +250,10 @@ function nXvim.api.HydraHint(group)
     if nXvim.api.KEY_MAP_DATA[group] then
         local data = nXvim.api.KEY_MAP_DATA[group]
         for key, value in pairs(data) do
-            hint = hint .. '_' .. value.key .. '_' .. ': ' .. value.desc .. '\n'
+            hint = hint .. '_' .. value.key .. '_' .. ':\t' .. value.desc .. '\n'
         end
     end
-    hint = hint .. '_<Esc>_: Exit' .. '\n'
+    hint = hint .. '_<Esc>_:\t\tExit' .. '\n'
     return hint;
 end
 
@@ -374,8 +373,8 @@ vim.o.winborder = 'rounded'
 vim.g.mapleader='\\'
 
 
-nXvim.api.KeyMap('n', '<leader>ce'   , ':e $MYVIMRC<CR>'    , 'Edit init.lua'   , 'Configure')
-nXvim.api.KeyMap('n', '<leader>cs'   , ':source %<CR>'      , 'Source init lua' , 'Configure')
+nXvim.api.KeyMap('n', '<leader>ce'   , ':e $MYVIMRC<CR>'    , 'Edit init.lua file'   , 'Configure')
+nXvim.api.KeyMap('n', '<leader>cs'   , ':source %<CR>'      , 'Source init.lua file' , 'Configure')
 
 nXvim.api.KeyMap("n", "<leader>/c"   , ':nohlsearch<CR>'    , 'Clear search highlights', 'Generic')
 
@@ -445,7 +444,7 @@ nXvim.api.KeyMap('n', '<leader>dc'   , ':DapContinue<CR>'                , 'Cont
 nXvim.api.KeyMap('n', '<leader>di'   , ':DapStepInto<CR>'                , 'Step Into'          , 'Debug')
 nXvim.api.KeyMap('n', '<leader>do'   , ':DapStepOut<CR>'                 , 'Step Out'           , 'Debug')
 nXvim.api.KeyMap('n', '<leader>dn'   , ':DapStepOver<CR>'                , 'Step Over'          , 'Debug')
-nXvim.api.KeyMap('n', '<leader>de'   , ':DapEnd<CR>'                     , 'Start debugger'     , 'Debug')
+nXvim.api.KeyMap('n', '<leader>de'   , ':DapEnd<CR>'                     , 'Stop debugger'      , 'Debug')
 
 -- Avante
 nXvim.api.KeyMap('n', '<leader>a'    , ':AvanteToggle<CR>'               , 'Avante toggle'      , 'AI')
