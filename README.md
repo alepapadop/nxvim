@@ -66,10 +66,10 @@ Blink: https://github.com/saghen/blink.cmp
 Illuminate: https://github.com/RRethy/vim-illuminate  
 Navic: https://github.com/SmiteshP/nvim-navic  
 
-+ **Terminal**
++ **Terminal**  
 ToggleTerm: https://github.com/akinsho/toggleterm.nvim    
 
-+ **Debugging**
++ **Debugging**  
 Nvim dap: https://github.com/mfussenegger/nvim-dap  
 Mason dap: https://github.com/jay-babu/mason-nvim-dap.nvim  
 Dap view: https://github.com/igorlfs/nvim-dap-vie  
