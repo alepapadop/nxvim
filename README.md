@@ -8,6 +8,29 @@ It aims to use as much built-in functionality as possible instead of relying on 
 
 Ready for Lua and C/C++ development.
 
+## Installation
++ Prerequisites  
+  - Neovim 0.12 or higher  
+  - Lua language installed  
+  - Clangd (C++ LSP)  
+  - GCC (Compiler)  
+  - Fonts: Install the 0xProto Nerd Font.
+        Check if your distribution has a font management tool or search your package manager.
+        If unavailable, download it from nerdfonts.com.
+        Extract the ZIP content into /usr/share/fonts/ (system-wide) or ~/.local/share/fonts/ (user-specific). If your distro uses a different directory, place them accordingly.
+
++ Installation Steps
+  - Create the configuration directory if it doesn't exist: mkdir -p ~/.config/nvim/
+  - Place the init.lua file inside that directory.
+  - Launch Neovim by typing nvim in your terminal.
+  - In your terminal settings, change the display font to 0xProto Nerd Font.
+  - Restart the terminal and launch nvim again.
+  - You are ready to go!
+
++ Post-Installation / Troubleshooting  
+  - Your distribution may be missing some required executables. Run :checkhealth inside Neovim to see a list of warnings or errors. Common dependencies include:
+    gcc, lua, clangd, fzf, treesitter, rg (ripgrep), fd (fd-find)
+ 
 
 ## Plugins
 
