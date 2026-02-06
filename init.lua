@@ -101,7 +101,10 @@ vim.pack.add{
 vim.pack.add{
     {
         src = 'https://github.com/L3MON4D3/LuaSnip',
-        version = 'master'
+        version = 'master',
+        build = function()
+            vim.fn.system({ "make install_jsregexp" })
+        end,
     },
     {
         src = 'https://github.com/Saghen/blink.cmp',
@@ -860,7 +863,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
     group = vim.api.nvim_create_augroup('UserLspConfig', {}),
     callback = function(ev)
 
-        print("lala")
         if package.loaded['nvim-navic'] and ev.data then
             local client_id = ev.data.client_id
             local navic = require('nvim-navic')
