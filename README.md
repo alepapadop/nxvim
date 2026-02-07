@@ -1,3 +1,5 @@
+![nxvim_image](https://github.com/alepapadop/nxvim/blob/main/nxvim_intro.png)
+
 # nXvim - Next Vim
 
 An opinionated Neovim distribution that tries to implement the KISS principle.
