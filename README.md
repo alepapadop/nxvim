@@ -30,6 +30,8 @@ Ready for Lua and C/C++ development.
 + Post-Installation / Troubleshooting  
   - Your distribution may be missing some required executables. Run :checkhealth inside Neovim to see a list of warnings or errors. Common dependencies include:
     gcc, lua, clangd, fzf, treesitter, rg (ripgrep), fd (fd-find)
+  - If a package misbehaves, you can lock it to a specific version. In Packer, use the following syntax: `version = vim.version.range("^18.0.0")`.  
+    Similarly, for the Mason language server manager, use: `ensure_installed = {'clangd', 'lua_ls@3.15.0'}`.
  
 
 ## Plugins
