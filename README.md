@@ -260,16 +260,6 @@ Users can find all custom key mappings by pressing `<leader>h`. The Hydra plugin
 | --- | --- |
 | `<leader>h` | Show Hydra help window |
 
-  
-  
-
-
-  
-##
-Explain its plugin  
-Check external packages  
-Add support for Python, Rust, Html, JS, Carbon, Go  
-Create Website  
 
 
 
