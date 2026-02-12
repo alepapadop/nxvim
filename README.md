@@ -38,59 +38,100 @@ Ready for Lua and C/C++ development.
 
 ## Plugins
 
-+ **Theme**  
-Catppuccin : https://github.com/catppuccin/nvim  
++ **Theme**
 
-+ **Syntax**  
-Treesitter: https://github.com/nvim-treesitter/nvim-treesitter  
+  | Plugin | Location |
+  | --- | --- |
+  | Catppuccin | https://github.com/catppuccin/nvim  |  
 
-+ **Searching**    
-Telescope: https://github.com/nvim-telescope/telescope.nvim  
++ **Syntax**
+  | Plugin | Location |
+  | --- | --- |
+  | Treesitter | https://github.com/nvim-treesitter/nvim-treesitter  |  
 
-+ **Status line**  
-LuaLine: https://github.com/nvim-lualine/lualine.nvim  
++ **Searching**
+  
+  | Plugin | Location |
+  | --- | --- |  
+  | Telescope | https://github.com/nvim-telescope/telescope.nvim  |  
 
-+ **Icons**  
-WebDevicons: https://github.com/nvim-tree/nvim-web-devicons  
-VimDevicons: https://github.com/ryanoasis/vim-devicons  
-Mini Icons: https://github.com/nvim-mini/mini.icons  
++ **Status line**
+  
+  | Plugin | Location |
+  | --- | --- |  
+  | LuaLine | https://github.com/nvim-lualine/lualine.nvim  |  
 
-+ **Greeter**  
-Alpha: https://github.com/goolord/alpha-nvim  
++ **Icons**
+  
+  | Plugin | Location |
+  | --- | --- |  
+  | WebDevicons | https://github.com/nvim-tree/nvim-web-devicons  |
+  | VimDevicons | https://github.com/ryanoasis/vim-devicons  |
+  | Mini Icons | https://github.com/nvim-mini/mini.icons  |  
 
-+ **File Browser**  
-Neo Tree: https://github.com/nvim-neo-tree/neo-tree.nvim  
++ **Greeter**
+  
+  | Plugin | Location |
+  | --- | --- |  
+  | Alpha | https://github.com/goolord/alpha-nvim  |  
 
-+ **LSP manager**  
-Mason: https://github.com/mason-org/mason.nvim  
-Mason - LSP: https://github.com/mason-org/mason-lspconfig.nvim  
++ **File Browser**
+  
+  | Plugin | Location |
+  | --- | --- |  
+  | Neo Tree | https://github.com/nvim-neo-tree/neo-tree.nvim  |  
 
-+ **Coding**  
-Blink: https://github.com/saghen/blink.cmp  
-Illuminate: https://github.com/RRethy/vim-illuminate  
-Navic: https://github.com/SmiteshP/nvim-navic  
++ **LSP manager**
+  
+  | Plugin | Location |
+  | --- | --- |  
+  | Mason | https://github.com/mason-org/mason.nvim  |
+  | Mason - LSP | https://github.com/mason-org/mason-lspconfig.nvim  |
 
-+ **Terminal**  
-ToggleTerm: https://github.com/akinsho/toggleterm.nvim    
++ **Coding**
+  
+  | Plugin | Location |
+  | --- | --- |  
+  | Blink | https://github.com/saghen/blink.cmp  |
+  | Illuminate | https://github.com/RRethy/vim-illuminate  |
+  | Navic | https://github.com/SmiteshP/nvim-navic  |
 
-+ **Debugging**  
-Nvim dap: https://github.com/mfussenegger/nvim-dap  
-Mason dap: https://github.com/jay-babu/mason-nvim-dap.nvim  
-Dap view: https://github.com/igorlfs/nvim-dap-vie  
++ **Terminal**
+  
+  | Plugin | Location |
+  | --- | --- |  
+  | ToggleTerm | https://github.com/akinsho/toggleterm.nvim  |  
 
-+ **Key help**  
-Hydra: https://github.com/nvimtools/hydra.nvim  
++ **Debugging**
+  
+  | Plugin | Location |
+  | --- | --- |  
+  | Nvim dap | https://github.com/mfussenegger/nvim-dap  |
+  | Mason dap | https://github.com/jay-babu/mason-nvim-dap.nvim  |
+  | Dap view | https://github.com/igorlfs/nvim-dap-vie  | 
 
-+ **AI**  
-Avante: https://github.com/yetone/avante.nvim  
++ **Key help**
+  
+  | Plugin | Location |
+  | --- | --- |  
+  | Hydra | https://github.com/nvimtools/hydra.nvim  |
 
-+ **Dependencies & Helper plugins**  
-Plenary: https://github.com/nvim-lua/plenary.nvim  
-Telescope UI select: https://github.com/nvim-telescope/telescope-ui-select.nvim  
-Nui: https://github.com/MunifTanjim/nui.nvim  
-Tiny Code actions: https://github.com/rachartier/tiny-code-action.nvim  
-fzf lua: https://github.com/ibhagwan/fzf-lua  
-LuaSnip: https://github.com/L3MON4D3/LuaSnip  
++ **AI**
+  
+  | Plugin | Location |
+  | --- | --- |  
+  | Avante | https://github.com/yetone/avante.nvim  |  
+
++ **Dependencies & Helper plugins**
+  
+  | Plugin | Location |
+  | --- | --- |  
+  | Plenary | https://github.com/nvim-lua/plenary.nvim  |
+  | Telescope UI select | https://github.com/nvim-telescope/telescope-ui-select.nvim  |
+  | Nui | https://github.com/MunifTanjim/nui.nvim  |
+  | Tiny Code actions | https://github.com/rachartier/tiny-code-action.nvim  |
+  | fzf lua | https://github.com/ibhagwan/fzf-lua  |
+  | LuaSnip | https://github.com/L3MON4D3/LuaSnip  |
 
 ## nXvim API
 
